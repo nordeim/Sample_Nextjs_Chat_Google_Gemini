@@ -11,6 +11,7 @@ Bash
 npx create-next-app gemini-app
 cd gemini-app
 npm install @google/generative-ai
+
 Code Structure:
 
 We will have the following files:
@@ -179,6 +180,7 @@ export default function Home() {
         </div>
     );
 }
+
 Explanation of pages/index.js:
 
 State Variables: Uses useState hooks to manage user inputs (apiKey, systemPrompt, model, temperature, prompt), the API response (response), loading state (isLoading), and error messages (error).
@@ -272,6 +274,7 @@ export default async function handler(req, res) {
         return res.status(500).json({ error: 'Failed to generate response', details: error.message });
     }
 }
+
 Explanation of pages/api/gemini.js:
 
 API Route Handler: This is a Next.js API route function (handler).
